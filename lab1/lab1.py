@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service
 from selenium.webdriver.edge.options import Options
-from selenium.webdriver.common.by import By
 import time
 import csv
 from bs4 import BeautifulSoup  # Для последующего парсинга HTML
@@ -15,7 +14,7 @@ driver = webdriver.Edge(service=service, options=edge_options)
 url = "https://annailina.pythonanywhere.com/"
 driver.get(url)
 
-scroll_pause_time = 0.5
+scroll_pause_time = 3
 
 # Скроллим до конца страницы
 last_height = driver.execute_script("return document.body.scrollHeight")
